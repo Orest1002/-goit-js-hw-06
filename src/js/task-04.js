@@ -1,5 +1,5 @@
 
-
+// 
 const counters = document.querySelector('#counter')
   const buttons = document.querySelectorAll('[data-action]')
     console.log(counters)
