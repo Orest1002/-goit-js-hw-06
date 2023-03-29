@@ -1,21 +1,21 @@
 
 // 
-const counters = document.querySelector('#counter')
-  const buttons = document.querySelectorAll('[data-action]')
-    console.log(counters)
-    buttons.forEach (
-      btn => btn.addEventListener('click' ,function(){
-const increments = this.dataset.increments;
-const inp = this.parentElement.querySelector('#value');
-const currentValue = +inp.value;
-let newValue ;
-if(increments === 'increment'){
-  newValue = currentValue + 1 ;
-}
-console.log(newValue)
-      })
+const counters = document.querySelector('#value');
+  const buttonsDecrement = document.querySelector('[data-action="decrement"]');
+  const buttonsIncrement = document.querySelector('[data-action="increment"]');
+    let masseg = 0;
 
-    )
+    buttonsDecrement.addEventListener('click', ()=> {
+      masseg -=1,
+      counters.textContent = masseg
+    });
+    buttonsIncrement.addEventListener('click',() =>{ 
+      masseg +=1,
+      counters.textContent = masseg
+    })
+
+
+   
     
 
     
